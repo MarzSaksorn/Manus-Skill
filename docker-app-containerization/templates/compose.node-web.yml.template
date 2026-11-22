@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ${IMAGE_NAME:-webapp}:local
+    init: true
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+    # Loopback-only by default; change deliberately if LAN access is required.
+    # This is direct HTTP app publishing, not HTTPS termination.
+    ports:
+      - "127.0.0.1:${APP_PORT:-3000}:3000"

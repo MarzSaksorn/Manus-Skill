@@ -1,0 +1,27 @@
+# Adapt the Node version, build output, runtime files, and start command to the app.
+ARG NODE_VERSION=22-bookworm-slim
+
+FROM node:${NODE_VERSION} AS dependencies
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+
+FROM dependencies AS build
+COPY . .
+RUN npm run build
+
+FROM node:${NODE_VERSION} AS production-dependencies
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
+
+FROM node:${NODE_VERSION} AS runtime
+ENV NODE_ENV=production \
+    PORT=3000
+WORKDIR /app
+COPY --from=production-dependencies /app/node_modules ./node_modules
+COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/dist ./dist
+USER node
+EXPOSE 3000
+CMD ["node", "dist/server.js"]
