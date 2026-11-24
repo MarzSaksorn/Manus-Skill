@@ -1,2 +1,61 @@
-# Manus-Skill
-### Just my AI Skills for my own project, from sources like Official Manus, Third Party inside Manus, From GitHub repos and Ones that I Created myself
+# Manus Skills
+
+A collection of Manus skills for software development, interface design, project delivery, security, and writing. Each entry links to its source `SKILL.md` and summarizes what it helps with and when to use it.
+
+## Development and architecture
+
+- [TypeScript best practices](TypeScript%20best%20practices/SKILL.md) — Guidance for safe, expressive TypeScript, including modeling valid states, validating external data, narrowing types safely, testing with real framework primitives, and avoiding unsafe casts or shipped debug logging.
+- [API designer](api-designer/SKILL.md) — Helps design REST and GraphQL APIs and OpenAPI specifications, from resource modeling through contract testing and versioning. Covers consistent conventions, authentication, pagination, rate limits, and useful error responses.
+- [Backend developer](backend-developer/SKILL.md) — Supports building secure, scalable server-side APIs and microservices. Covers architecture, databases, authentication, caching, tests, observability, performance, and production readiness.
+- [Responsive layout builder](responsive-layout-builder/SKILL.md) — Practical patterns for responsive, mobile-first layouts using CSS Grid, Flexbox, breakpoints, and container queries. Includes common page, card, hero, header, and typography patterns, with advice to test varied viewports and content.
+- [Docker app containerization](docker-app-containerization/SKILL.md) — Helps containerize existing apps with reproducible Docker images and Compose services while preserving deployment boundaries. Covers runtime configuration, secrets, persistence, health checks, and validation; it does not cover reverse proxies or TLS.
+- [Coolify Compose image migration](coolify-compose-image-migration/SKILL.md) — Plans and implements migrations from Compose-based builds to Coolify-compatible image deployments, while preserving local Compose and production behavior. Emphasizes immutable image tags, secret separation, staged validation, rollback, and approval before production changes.
+- [HTTPS reverse proxy](https-reverse-proxy/SKILL.md) — Guides setup and troubleshooting of HTTPS reverse proxies for self-hosted apps, preferring Caddy where appropriate. Covers routing, certificates, DNS and firewall prerequisites, private service access, and validation; production or network changes need approval.
+- [Supabase](supabase/SKILL.md) — Guidance for Supabase services, client libraries, CLI/MCP, schema changes, security, and troubleshooting. Stresses current documentation, RLS and credential safety, verification, and workflow-specific migration practices.
+- [Supabase Postgres best practices](supabase-postgres-best-practices/SKILL.md) — Supabase-focused Postgres guidance for query performance, connections, security and RLS, schemas, concurrency, monitoring, and advanced features. Use it for SQL, migrations, indexing, database performance, or data-visibility issues.
+
+## UI frameworks and design
+
+- [daisyUI](daisyui/SKILL.md) — Main guide for daisyUI 5, its Tailwind CSS 4 component classes, semantic colors, and themes. Helps choose the right component guidance and points to its installation, usage, color, and configuration modules.
+- [daisyUI installation](daisyui/install/SKILL.md) — Explains how to install daisyUI 5 with Tailwind CSS 4, including CSS imports, plugin setup, and CDN use. Directs users to framework-specific steps and away from deprecated `tailwind.config.js` setup.
+- [daisyUI usage](daisyui/usage/SKILL.md) — Shows how to build interfaces with daisyUI components, then use Tailwind utilities for adjustments or missing pieces. Covers responsive layout, variants, and theme-aware styling.
+- [daisyUI colors](daisyui/colors/SKILL.md) — Documents daisyUI semantic colors, built-in and custom themes, and theme color configuration. Emphasizes theme-aware tokens, readable content-color pairs, and avoiding unnecessary fixed or dark-mode-specific colors.
+- [daisyUI configuration](daisyui/config/SKILL.md) — Documents daisyUI 5 CSS plugin configuration, including themes, roots, include/exclude options, class prefixes, and logging. Explains how to enable themes and select one with `data-theme`.
+- [HeroUI React](heroui-react/SKILL.md) — Guidance for building accessible React interfaces with HeroUI v3, Tailwind CSS 4, and React Aria. Covers component setup, compound components, semantic variants, `oklch` CSS-variable themes, import order, and current documentation.
+- [HeroUI Native](heroui-native/SKILL.md) — Helps build React Native interfaces with HeroUI Native and Uniwind. Covers installation, components, themes, providers, native interaction patterns, semantic variants, and current API documentation.
+- [HeroUI migration](heroui-migration/SKILL.md) — Guides upgrades from HeroUI v2 to v3, including full or incremental migrations. It emphasizes consulting current migration guides first because v3 contains breaking changes, then reviewing components, dependencies, and styling.
+- [Careflow dashboard](careflow-dashboard/SKILL.md) — Build, extend, or audit tablet-first clinical operations dashboards using React, HeroUI v3, Tailwind CSS v4, and GSAP. Emphasizes high-trust visual design, clear status semantics, accessibility, responsive layouts, reduced motion, and honest demo-data labels.
+- [Muapi UI design](muapi-ui-design/SKILL.md) — Turns product requirements into high-fidelity mobile and web mockups, wireframes, and design-system specifications. Uses Atomic Design, platform-aware layouts, design tokens, and usability and accessibility guidance.
+- [Web design engineer](web-design-engineer/SKILL.md) — Creates or redesigns polished browser-rendered visual front ends, including pages, dashboards, prototypes, animations, mockups, and data visualizations. Emphasizes verified content, an intentional design system, responsive implementation, and approval checkpoints.
+- [Unslop / interface redesign](unslop/SKILL.md) — Helps redesign interfaces that look generic or unfinished into product-specific screens while preserving their features, content, and section order. Calls for an audit and an approved visual direction before changes, followed by a structured redesign and review.
+- [UI-preserving migration](ui-preserve-migration/SKILL.md) — Guides focused additions or migrations to an established web UI without unrequested redesign. Captures a baseline, integrates through the smallest seam, protects layout and interaction contracts, and validates changes with tests and visual checks.
+- [Preserve-mode UI maintenance](preserve-mode-ui-maintenance/SKILL.md) — Helps make focused changes to existing browser interfaces while preserving routes, information architecture, behavior, accessibility, and responsive behavior. Recommends inspecting tests and project conventions first, then adding targeted regression checks.
+- [Web performance](web-perf/SKILL.md) — Audits and improves website performance with cold-load traces, Core Web Vitals, network analysis, accessibility snapshots, and source review. Prioritizes fixes by evidence and reports clearly when measurement tools are unavailable.
+- [AI SEO](ai-seo/SKILL.md) — Helps improve visibility and extractability of content in AI-generated answers and search experiences. Audits content quality, authority, crawler access, machine-readable information, third-party presence, and monitoring while discouraging AI-bait and unsupported claims.
+- [Interactive flowchart](flowchart/skill-flowchart-main/SKILL.md) — Creates polished interactive HTML flowcharts for codebases, workflows, data flows, prompt pipelines, and system maps. Focuses on evidence-based mapping, readable overviews with drilldowns, and representing each model invocation clearly.
+- [React language switch](react-language-switch/SKILL.md) — Adds or improves multilingual support in existing React apps while preserving behavior and visual design. Covers locale selection and persistence, complete UI translation, formatting, document language, accessibility, and verification.
+
+## Motion and interaction
+
+- [Motion UI performance](motion-ui-performance/SKILL.md) — Adds smooth web motion or fixes janky animations while preserving layout stability, accessibility, and behavior. Recommends the narrowest suitable tool, transform/opacity animation, reduced-motion support, cleanup, and performance checks.
+- [Performant UI motion](performant-ui-motion/SKILL.md) — Guides restrained, efficient interaction motion for menus, selection feedback, hover states, and scroll effects. Preserves DOM and keyboard/focus behavior, avoids layout-triggering properties, and requires reduced-motion handling and focused validation.
+
+## Repository workflows and project continuity
+
+- [Deployed frontend migrator](deployed-frontend-migrator/SKILL.md) — Captures an authorized deployed frontend as an independent local copy or plans its connection to a backend and repository migration. Protects source/history boundaries, credentials, and production systems, and calls for explicit authorization before integration.
+- [GitHub branch delivery](github-branch-delivery/SKILL.md) — Guides safe delivery of development work on a feature branch: inspect state, stage intended changes, validate, protect unrelated files, push, and verify. Merging, deployment, and other production-impacting work remain separate actions requiring approval.
+- [Safe Git delivery](safe-git-delivery/SKILL.md) — Provides a traceable, reversible process for delivering authorized repository changes, from Git inspection and narrow diffs to tests, commits, and push verification. Pushes require authorization; merging and deployment are treated separately.
+- [Project continuity](project-continuity/SKILL.md) — Maps an unfamiliar repository and creates or reads portable handoffs so work can continue without the original conversation. Verifies repository state and architecture, distinguishes confirmed facts from assumptions, and keeps handoffs standalone and free of sensitive data.
+- [Project handoff](project-handoff/SKILL.md) — Creates accurate continuation briefs from a project's repository, history, and current state. Helps another developer pick up work while distinguishing verified facts from historical claims and protecting sensitive information.
+- [Project handoff reader](project-handoff-reader/SKILL.md) — Interprets and reviews handoffs or continuation briefs before continuing work. Separates historical claims from verified state, checks repository references, summarizes remaining work and blockers, and seeks confirmation before high-impact changes.
+- [Project structure mapper](project-structure-mapper/SKILL.md) — Creates a concise, evidence-based map of an existing repository, especially before UI or feature work. Inspects instructions, entry points, data flow, conventions, and operational boundaries without modifying files unless asked.
+
+## Security and specialized systems
+
+- [Security audit](security-audit/SKILL.md) — A defensive, source-first method for finding vulnerabilities across real trust boundaries, with evidence, safe reproduction, calibrated severity, and focused fixes. Use guidance mode for focused security questions; full audit artifacts are reserved for explicitly requested comprehensive reviews or audits.
+- [UTi120M thermal companion](uti120m-thermal-companion/SKILL.md) — Guides Android integration with the UNI-T UTi120M thermal camera, including USB access, frame transport, preview, calibration, and secure capture upload. Treats the camera as a custom USB sensor and requires physical-device validation; raw counts or colorized previews must not be presented as temperatures.
+
+## Skill authoring
+
+- [Skill creator](skill-creator/SKILL.md) — Guides creating, updating, validating, packaging, and iterating on Manus skills. Covers an ordered workflow, concise and appropriately scoped instructions, initialization and validation scripts, and environment-specific packaging.
+- [Writing skills](writing-skills/SKILL.md) — Applies test-driven development to reusable skill documentation: test behavior without the skill, add the minimum guidance needed, then retest and refine. Also covers clear descriptions, matching guidance to failure types, and verification before deployment.
